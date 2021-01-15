@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A basic php mailer contact form</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="form-validation.js"></script>
 
 </head>
 
@@ -54,49 +54,6 @@
 </body>
 
 
-<!--js validation scrip-->
 
-<script>
-function validateForm($form) { 
-var $form = $('form'); 
-var error = false;
-var name = document.forms[$form.attr('name')]["NAME"].value;
-if (name == "") {
-    //alert("Nome*è un campo obbligatorio");
-    showErrors($form.attr('name')+'-NAME')
-    error = true;
-  }
-  var surname = document.forms[$form.attr('name')]["SURNAME"].value;
-  if (surname == "") {
-    showErrors($form.attr('name')+'-SURNAME')
-    error = true;
-  }  
-  var email = document.forms[$form.attr('name')]["EMAIL"].value;
-  if (email == "") {
-    showErrors($form.attr('name')+'-EMAIL')
-    error = true;
-  }
-  if(error){
-        
-        return false;
-    }  else {
-        return true;
-    }
-
-function showErrors(id) {
-  document.getElementById(id).classList.add("error");
-  document.getElementById(id + '_errortext').style.display = 'block'
-}    
-
-}
-
-</script>
-
-<!--re-loading to page to make the alert appear after form registration-->
-<script type="text/javascript">
-if(window.history.replaceState){
-  window.history.replaceState(null,null,window.location.href);
-}
-</script>
 
 </html>
