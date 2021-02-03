@@ -51,6 +51,8 @@
 
 .form-btn{
     margin-top:20px;
+    
+
 }
 
 .form-control.success input {
@@ -72,7 +74,7 @@
 
 <!--contact form-->
 
-<form onsubmit="return checkInputs()" class="form" id="my-form" method="post" class="validate" taget="_blank" novalidate>
+<form onsubmit="return validateForm()" class="form" id="my-form" method="post" class="validate" taget="_blank" novalidate>
     <div class="form-control">
         <label>Name*</label>
         <input type="text" name="NAME" class="required" id="NAME" placeholder="Name*">
@@ -99,7 +101,7 @@
     
 </body>
 
-<script type="text/javascript" src="form-validation.js"></script>
+<script type="text/javascript" src="form-validation-fetch.js"></script>
 
 
 
